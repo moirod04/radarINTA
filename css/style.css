@@ -1,0 +1,63 @@
+header{
+	border-bottom: solid 4px; 
+	border-bottom-color: #0a9da9;
+}
+
+#logo-header{
+	margin: 25px;
+}
+
+#red{
+	text-align: right;
+	margin-top: 47px;
+	margin-right: -45px;
+	font-size: 1.5rem;
+	color: #0a9da9;
+}
+
+.full{
+	position: relative;
+}
+
+#fullscreen{
+	size: 1rem;
+}
+.desplegable{
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 28px;
+	border-radius: 5rem;
+}
+.drop{
+	position: absolute;
+	right: 26px;
+	top:26px;
+}
+.tablacolores{
+	position: absolute;
+	margin-left: 34px;
+	margin-top: 94px;
+	
+
+}
+
+td{
+	width: 19px;
+	height: 20px;
+	border-bottom: solid 0.05px white;
+}
+
+.fila{
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+
+footer{
+	border-top: solid 4px; border-top-color: #0a9da9;
+}
+
+#logo-footer{
+	margin-top: 10px; 
+	margin-right: 20px;
+}
