@@ -1,7 +1,3 @@
-header{
-	border-bottom: solid 4px; 
-	border-bottom-color: #0a9da9;
-}
 
 #logo-header{
 	margin: 25px;
@@ -11,7 +7,7 @@ header{
 	text-align: right;
 	margin-top: 47px;
 	margin-right: -45px;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: #0a9da9;
 }
 
@@ -41,7 +37,7 @@ header{
 
 }
 
-td{
+.colores{
 	width: 19px;
 	height: 20px;
 	border-bottom: solid 0.05px white;
@@ -53,11 +49,79 @@ td{
 }
 
 
-footer{
-	border-top: solid 4px; border-top-color: #0a9da9;
-}
-
 #logo-footer{
 	margin-top: 10px; 
 	margin-right: 20px;
+}
+
+.actual{
+	background-color: #404040;
+	padding:10px;
+}
+.pasado{
+	background-color: #404040;
+	padding:10px;
+}
+.player{
+	width: 35px;
+    height: 28px;
+    display: inline;
+}
+
+.hora{
+	display: inline;
+	color: #D1D1D1;
+	font-size: 28px;
+}
+
+.ampm{
+	display: inline;
+	color: #6B6969;
+	font-size: 28px;
+}
+
+#calendar-container{
+    padding: 4px;
+    width: 143px;
+    height: 149px;
+    text-align: center;
+    border: 1px solid #D1D1D1;
+    font-size: 8px;
+    font-family: Arial;
+    color: #D1D1D1;
+}
+
+#calendar-container>div{
+    padding: 0;
+}
+
+#calendar-month-year{
+    margin: 5px;
+}
+
+#calendar-dates>table>tr>td{
+    padding: 5px;
+}
+
+.hora2{
+	display: inline;
+	color: #D1D1D1;
+	font-size: 20px;
+}
+
+.ampm2{
+	display: inline;
+	color: #6B6969;
+	font-size: 20px;
+}
+
+.rangehora{
+	display: block;
+	width: 80px;
+}
+
+.entrada{
+	display: block;
+	color: #D1D1D1;
+	font-size: 14px;
 }

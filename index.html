@@ -1,157 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>radar</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/fontello.css">
+    <meta charset="UTF-8">
+    <title>radar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontello.css">
 </head>
 <header>
-	
-		
-	  <div class="container-fluid"></div>
-	    <div class="row">
-		  <div class="col-md-3 col-sm-6"><img src="logos/logo-INTA-header.png" id="logo-header"></div>
-		  <div class="offset-md-3 col-md-5 col-sm-6"><p id="red">RED DE RADARES METEOROLÓGICOS</p></div>
-		</div>
-	  
+
+
+    <div class="container-fluid"></div>
+    <div class="row">
+        <div class="col-md-2 col-sm-4"><img src="logos/logo-INTA-header.png" id="logo-header"></div>
+        <div class="offset-md-5 col-md-4 col-sm-4"><p id="red">RED DE RADARES METEOROLÓGICOS</p></div>
+    </div>
+
 
 </header>
 <body>
 
-	<div class="full" id="pc">
-		<button onclick="pantallaCompleta();" class="desplegable btn"><span class="icon-resize-full-1" id="fullscreen"></span></button>
-		<table class="tablacolores">
-			    <tr>
-			      <td style="background-color: #9402FF"></td>
-			    <tr>
-			      <td style="background-color:#FB03E1"> </td>
-			    </tr>
-			    <tr>
-			      <td style="background-color: #92030E"></td>
-			    </tr>
-			    <tr>
-			      <td style="background-color: #C10000"></td>
-			    </tr>
-			  	<tr>
-			      <td style="background-color: #FE0202"></td>
-			    <tr>
-			      <td style="background-color: #FE8402"></td>
-			    </tr>
-			    <tr>
-			      <td style="background-color:#FEAA02"></td>
-			    </tr>
-			    <tr>
-			      <td style="background-color:#FEDC02"></td>
-			    </tr>
-			    <tr>
-			      <td style="background-color:#01750B"></td>
-			    <tr>
-			      <td style="background-color:#00B40F"></td>
-			    </tr>
-			    <tr>
-			      <td style="background-color:#00DD12"></td>
-			    </tr>
-			    <tr>
-			      <td style="background-color:#0003DD"></td>
-			    </tr>
-			    <tr>
-			      <td style="background-color:#0064DD"></td>
-			    </tr>
-			    <tr>
-			      <td style="background-color:#02FFF0"></td>
-			    </tr>
-		</table>
-		<div class="dropdown drop">
-		  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    OPCIONES DE VISUALIZACIÓN
-		  </button>
-		  
-		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-		    <form>
-			  <div class="form-group form-check fila">
-			    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-			    <label class="form-check-label" for="exampleCheck1">Reflectividad</label>
-			  </div>
-			  <div class="form-group form-check fila">
-			    <input type="checkbox" class="form-check-input" id="exampleCheck2">
-			    <label class="form-check-label" for="exampleCheck2">Total Diario</label>
-			  </div>
-			  <div class="form-group form-check fila">
-			    <input type="checkbox" class="form-check-input" id="exampleCheck3">
-			    <label class="form-check-label" for="exampleCheck3">Total Mensual</label>
-			  </div>
-			  <div class="form-group form-check fila">
-			    <input type="checkbox" class="form-check-input" id="exampleCheck4">
-			    <label class="form-check-label" for="exampleCheck4">Total mm desde las 9</label>
-			  </div>
-			  <div class="form-group form-check fila">
-			    <input type="checkbox" class="form-check-input" id="exampleCheck5">
-			    <label class="form-check-label" for="exampleCheck5">Intensidad - mm/h</label>
-			  </div>
-			  <div class="form-group form-check fila">
-			    <input type="checkbox" class="form-check-input" id="exampleCheck6">
-			    <label class="form-check-label" for="exampleCheck6">Intensidad y campo nuboso</label>
-			  </div>
-			  <div class="form-group form-check fila">
-			    <select class="custom-select">
-				  <option selected>HORA LOCAL</option>
-				  <option value="1">One</option>
-				  <option value="2">Two</option>
-				  <option value="3">Three</option>
-				</select>
-			  </div>   
-			</form>
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h4 class="panel-title">
-				        <buttom class="btn btn-dark btn-lg" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				          SITUACION ACTUAL
-				        </buttom>
-				      </h4>
-				    </div>
-				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				      <div class="panel-body">
-				        AQUI DEBE ESTAR LA HORA CON UN REPRODUCTOR 
-				      </div>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingTwo">
-				      <h4 class="panel-title">
-				        <buttom class="collapsed btn btn-dark btn-lg" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				          SITUACION PASADA
-				        </buttom>
-				      </h4>
-				    </div>
-				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-				      <div class="panel-body">
-				        AQUI DEBE ESTAR EL CALENDARIO Y LAS BARRAS  
-				      </div>
-				    </div>
-				  </div>
-				  
-				</div>  
+<div class="full container-fluid clearfix" id="pc">
+    <button onclick="pantallaCompleta();" class="desplegable btn"><span class="icon-resize-full-1"
+                                                                        id="fullscreen"></span></button>
+    <table class="tablacolores">
+        <tr>
+            <td class="colores" style="background-color: #9402FF"></td>
+        <tr>
+            <td class="colores" style="background-color:#FB03E1"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color: #92030E"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color: #C10000"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color: #FE0202"></td>
+        <tr>
+            <td class="colores" style="background-color: #FE8402"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color:#FEAA02"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color:#FEDC02"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color:#01750B"></td>
+        <tr>
+            <td class="colores" style="background-color:#00B40F"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color:#00DD12"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color:#0003DD"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color:#0064DD"></td>
+        </tr>
+        <tr>
+            <td class="colores" style="background-color:#02FFF0"></td>
+        </tr>
+    </table>
 
-  			
-		  </div>
-	</div>
-		<img src="imagenes/07-Pantalla-Fullscreen.png">
-	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-	<script src="js/pantallacompleta.js"></script>
+
+    <div class="dropdown drop" style="max-width: 250px;">
+
+        <!-- Ejemplo codigo Rosmy -->
+        <a class="btn btn-info dropdown-toggle" data-toggle="collapse" href="#collapsePadre" aria-expanded="false"
+           aria-controls="collapsePadre">
+            OPCIONES DE VISUALIZACIÓN
+        </a>
+        <div class="collapse" id="collapsePadre">
+            <div class="well" style="background: #fff;width: 260px;">
+
+                <form style="width: 256px">
+                    <div class="form-group form-check fila">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label" for="exampleCheck1">Reflectividad</label>
+                    </div>
+                    <div class="form-group form-check fila">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label" for="exampleCheck2">Total Diario</label>
+                    </div>
+                    <div class="form-group form-check fila">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label" for="exampleCheck3">Total Mensual</label>
+                    </div>
+                    <div class="form-group form-check fila">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label" for="exampleCheck4">Total mm desde las 9</label>
+                    </div>
+                    <div class="form-group form-check fila">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label" for="exampleCheck5">Intensidad - mm/h</label>
+                    </div>
+                    <div class="form-group form-check fila">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label" for="exampleCheck6">Intensidad y campo nuboso</label>
+                    </div>
+                    <div class="form-group form-check fila">
+                        <select class="custom-select">
+                            <option selected>HORA LOCAL</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a class="btn btn-dark btn-block" role="button" data-toggle="collapse"
+                                   data-parent="#accordion"
+                                   href="#collapseOne"
+                                   aria-expanded="true" aria-controls="collapseOne">
+                                    Situación Actual
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body actual">
+                                <p class="hora">20:22</p><p class="ampm">PM</p>
+                                <button class="btn btn-light btn-sm player"><p class="icon-play"></p></button>
+                                <button class="btn btn-light btn-sm player"><p class="icon-fast-backward"></p></button>
+                                <button class="btn btn-light btn-sm player"><p class="icon-fast-forward"></p></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed btn btn-dark btn-block" role="button" data-toggle="collapse"
+                                   data-parent="#accordion"
+                                   href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Situación Pasada
+									</a>    
+									  
+									</div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingTwo">
+                            <div class="panel-body pasado">
+	                                <div id="calendar-container">
+							            <div id="calendar-header">
+							                <span id="calendar-month-year"></span>
+							            </div>
+							            <div id="calendar-dates">
+							            </div>
+							        </div>
+							        	<p class="hora2">20:22</p><p class="ampm2">PM</p>
+										<input type="range" class="custom-range rangehora" id="customRange1">
+										<label for="customRange1" class="entrada">HORA</label>
+										<input type="range" class="custom-range rangehora" id="customRange2">
+										<label for="customRange2" class="entrada">MINUTOS</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Fin codigo Rosmy -->
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425428.367689709!2d-62.60502617414857!3d-33.026313043425525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b6539335d7d75b%3A0xec4086e90258a557!2sRosario%2C+Santa+Fe%2C+Argentina!5e0!3m2!1ses!2sve!4v1528736841651" width="1350" height="800" frameborder="0" style="border-bottom: solid 4px; 
+	border-bottom-color: #0a9da9;border-top: solid 4px; border-top-color: #0a9da9;" allowfullscreen></iframe>
+    
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+<script src="js/pantallacompleta.js"></script>
+<script type="text/javascript" src="js/calendario.js"></script>
 </body>
 <footer>
-	<div class="col-md-12">
-		<div class="col-sm-12 offset-md-4 col-md-8">
-			<img src="logos/logo-INTA-footer.png" id="logo-footer"><img src="logos/logo-ministerio-footer.png">
-		</div>
+    <div class="col-md-12">
+        <div class="col-sm-12 offset-md-4 col-md-8">
+            <img src="logos/logo-INTA-footer.png" id="logo-footer"><img src="logos/logo-ministerio-footer.png">
+        </div>
 
-	</div>
+    </div>
 </footer>
 </html>
